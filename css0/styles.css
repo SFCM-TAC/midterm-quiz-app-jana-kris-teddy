@@ -1,0 +1,35 @@
+#topText{
+    text-align: center;
+    font-family:sans-serif;
+}
+
+.text{
+    text-align: left;
+    font-style: oblique;
+    padding:inherit;
+}
+#questionNum{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    padding-top: 70px;
+}
+.container{
+shape-margin: 30px;
+    border-spacing: inherit;
+    align-self: center;
+    shape-margin: 70px;
+align-items: flex-start;
+    border-style:outset;
+    border-radius: 100px;
+    padding: 20px 20px 500px;
+}
+#greeter{
+    text-align: justify;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+.divider{
+    color:blue;
+    outline:inherit;
+}
