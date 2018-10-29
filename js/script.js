@@ -1,3 +1,27 @@
+
+
+function displayQuestion() {
+var questionsHere = document.getElementById('questionsHere');
+questionsHere.innerText = "How many brothers did Michael Jackson have?";
+//var question1 = document.createTextNode("How many brothers did Michael Jackson have?");
+//questionsHere.appendChild(question1);
+}
+
+
+window.addEventListener('load', displayQuestion);
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Michael Jackson questions
 // How many brothers did Michael Jackson have? 6
 // What city was Michael Jackson born in? Gary, IN
