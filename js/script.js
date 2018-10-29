@@ -1,26 +1,94 @@
 
+function Question(text, choices, answer) {
+    this.text = text;
+    this.choices = choices;
+    this.answer = answer;
+}
 
-function displayQuestion() {
+Question.prototype.correctAnswer = function(choice) {
+    return choice === this.answer;
+}
+
+function Quiz(questions) {
+    this.score = 0;
+    this.questions = questions;
+    this.questionIndex = 0;
+}
+
+Quiz.prototype.getQuestionIndex = function() {
+  return this.questions[this.questionIndex];
+}
+
+Quiz.prototype.isEnded = function() {
+    return this.questions.length === this.questionIndex;
+}
+
+Quiz.prototype.guess = function(answer) {
+    this.questionIndex++;
+
+    if(this.getQuestionIndex().correctAnswer(answer)) {
+        this.score++;
+    }
+}
+
+function populate() {
+  if(quiz.isEnded()) {
+    //showScores();
+  }
+  else {
+    //show question
+    var element = document.getElementById("question");
+    element.innerHTML = quiz.getQuestionIndex().text;
+
+    var choices = quiz.getQuestionIndex().choices;
+    for(var i=0; i< choices.length; i++) {
+        var element = document.getElementById("choice" + i);
+        element.innerHTML = choices[i];
+    }
+      }
+        }
+
+var questions = [
+    new Question("How many brothers did Michael Jackson have?", ["2", "4", "5", "6"], "6"),
+    new Question("In what city was Michael Jackson born?", ["Madison, WS", "Gary, IN", "London, EN", "Minneapolis, MN"], "Gary, IN"),
+    new Question("How many number 1 songs did Michael Jackson have?", ["6", "12", "21", "10"], "10"),
+    new Question("Who is Michael Jackson's youngest sibling?", ["Janet Jackson", "La Toya Jackson", "Randy Jackson", "Jermaine Jackson"], "Janet Jackson"),
+    new Question("_____ is the name of Michael Jackson's oldest son?", ["Apple", "Prince", "Alex", "Michael Jr."], "Prince"),
+    new Question("Michael Jackson won this many Grammy Awards:", ["0", "8", "18", "13"], "13"),
+    new Question("Michael launched what venture in 1986 based off of animals he owned?", ["Petco", "Michael's Zoo", "Michael's Pets", "The Jackson Mammalian Reserve for retired animals that want to chill"], "Michael's Pets"),
+    new Question("Michael Jackson won this many Grammy Awards:", ["0", "8", "18", "13"], "13"),
+    new Question("The homestead on which Michael Jackson lived is called:", ["Jacksonville", "Thriller Ranch", "Neverland Ranch", "Beat It"], "Neverland Ranch"),
+    new Question("At his 1988 London concert, what song did Michael Jackson include in his setlist at Princess Diana's request?", ["PYT", "Dirty Di", "Man In The Mirror", "Thriller"], "Dirty Di"),
+];
+
+var quiz = new Quiz(questions);
+
+populate();
+
+
+
+
+
+
+
+
+
+/*function displayQuestion() {
 var questionsHere = document.getElementById('questionsHere');
 questionsHere.innerText = "How many brothers did Michael Jackson have?";
 //var question1 = document.createTextNode("How many brothers did Michael Jackson have?");
 //questionsHere.appendChild(question1);
 }
 
+function displayAnswer() {
+var answerHere = document.getElementById('answerHere');
+answerHere.innerText = ["4", " 5", " 6", " 1"];
 
+
+}
 window.addEventListener('load', displayQuestion);
-
-
-
-
-
-
-
-
-
-
-
-
+window.addEventListener('load', displayAnswer);
+*/
 
 //Michael Jackson questions
 // How many brothers did Michael Jackson have? 6
