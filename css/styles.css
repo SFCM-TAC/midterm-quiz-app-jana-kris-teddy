@@ -1,3 +1,5 @@
+
+
 #topText{
     text-align: center;
     font-family:sans-serif;
@@ -8,6 +10,20 @@
     font-style: oblique;
     padding:inherit;
 }
+
+.picture{
+    image-resolution: snap;
+    align-self: center;
+    max-height: 25%;
+    max-width:25%;
+    padding: 10px;
+}
+
+#centerPic{
+
+    max-height:10%;
+}
+
 #questionNum{
     text-align: center;
     text-decoration: underline;
@@ -28,10 +44,14 @@ align-items: flex-start;
     text-align: center;
     padding-right: 30px;
     padding-left: 30px;
+    text-emphasis-color: red;
 }
 .divider{
     color:blue;
     outline:inherit;
+    background-color: powderblue;
+    width: auto;
+    height: 3px;
 }
 .buttons {
     margin-top: 30px;

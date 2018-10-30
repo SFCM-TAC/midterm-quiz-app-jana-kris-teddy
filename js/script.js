@@ -139,13 +139,13 @@ window.addEventListener('load', displayAnswer);
 
 
 var colour="random"; // "random" can be replaced with any valid colour ie: "red"...
-var sparkles=100;// increase of decrease for number of sparkles falling
+var sparkles=20;// increase of decrease for number of sparkles falling
 
 var x=ox=400;
 var y=oy=300;
 var swide=800;
 var shigh=600;
-var sleft=sdown=0;
+var sleft=sdown=10;
 var tiny=new Array();
 var star=new Array();
 var starv=new Array();
@@ -279,7 +279,7 @@ function update_star(i) {
 	if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
 	if (starv[i]) {
 		stary[i]+=1+Math.random()*3;
-		starx[i]+=(i%5-2)/5;
+		starx[i]+=(i%5-2)/8;
 		if (stary[i]<shigh+sdown) {
 			star[i].style.top=stary[i]+"px";
 			star[i].style.left=starx[i]+"px";
