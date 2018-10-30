@@ -72,7 +72,7 @@ function showProgress() {
 
 function showScores() {
     var quizOverHTML = "<h1>Result</h1>";
-        quizOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
+        quizOverHTML += "<h2 id='score'> Your scores: " + quiz.score + " out of 10</h2>";
     var element = document.getElementById("quiz");
     element.innerHTML = quizOverHTML;
 
@@ -326,13 +326,13 @@ function update_tiny(i) {
 document.onmousemove=mouse;
 function mouse(e) {
 	if (e) {
-		y=e.pageY;
-		x=e.pageX;
+		y=e.pageY + 10;
+		x=e.pageX + 10;
 	}
 	else {
 		set_scroll();
-		y=event.y+sdown;
-		x=event.x+sleft;
+		y=event.y+sdown + 10;
+		x=event.x+sleft + 10;
 	}
 }
 
