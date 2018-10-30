@@ -89,7 +89,7 @@ var questions = [
     new Question("_____ is the name of Michael Jackson's oldest son?", ["Apple", "Prince", "Alex", "Michael Jr."], "Prince"),
     new Question("Michael Jackson won this many Grammy Awards:", ["0", "8", "18", "13"], "13"),
     new Question("Michael launched what venture in 1986 based off of animals he owned?", ["Petco", "Michael's Zoo", "Michael's Pets", "The Jackson Mammalian Reserve for retired animals that want to chill"], "Michael's Pets"),
-    new Question("Michael Jackson won this many Grammy Awards:", ["0", "8", "18", "13"], "13"),
+    new Question("Who produced the album entitled Thriller", ["Randy Jackson", "Quincy Jones", "Dr. Dre", "Stevie Wonder"], "Quincy Jones"),
     new Question("The homestead on which Michael Jackson lived is called:", ["Jacksonville", "Thriller Ranch", "Neverland Ranch", "Beat It"], "Neverland Ranch"),
     new Question("At his 1988 London concert, what song did Michael Jackson include in his setlist at Princess Diana's request?", ["PYT", "Dirty Di", "Man In The Mirror", "Thriller"], "Dirty Di"),
 ];
