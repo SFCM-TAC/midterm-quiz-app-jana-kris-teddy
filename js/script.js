@@ -72,7 +72,7 @@ function showProgress() {
 
 function showScores() {
     var quizOverHTML = "<h1>Result</h1>";
-        quizOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
+        quizOverHTML += "<h2 id='score'> Your scores: " + quiz.score + " out of 10</h2>";
     var element = document.getElementById("quiz");
     element.innerHTML = quizOverHTML;
 
@@ -89,7 +89,7 @@ var questions = [
     new Question("_____ is the name of Michael Jackson's oldest son?", ["Apple", "Prince", "Alex", "Michael Jr."], "Prince"),
     new Question("Michael Jackson won this many Grammy Awards:", ["0", "8", "18", "13"], "13"),
     new Question("Michael launched what venture in 1986 based off of animals he owned?", ["Petco", "Michael's Zoo", "Michael's Pets", "The Jackson Mammalian Reserve for retired animals that want to chill"], "Michael's Pets"),
-    new Question("Michael Jackson won this many Grammy Awards:", ["0", "8", "18", "13"], "13"),
+    new Question("Who produced the album entitled Thriller", ["Randy Jackson", "Quincy Jones", "Dr. Dre", "Stevie Wonder"], "Quincy Jones"),
     new Question("The homestead on which Michael Jackson lived is called:", ["Jacksonville", "Thriller Ranch", "Neverland Ranch", "Beat It"], "Neverland Ranch"),
     new Question("At his 1988 London concert, what song did Michael Jackson include in his setlist at Princess Diana's request?", ["PYT", "Dirty Di", "Man In The Mirror", "Thriller"], "Dirty Di"),
 ];
@@ -326,13 +326,13 @@ function update_tiny(i) {
 document.onmousemove=mouse;
 function mouse(e) {
 	if (e) {
-		y=e.pageY;
-		x=e.pageX;
+		y=e.pageY + 10;
+		x=e.pageX + 10;
 	}
 	else {
 		set_scroll();
-		y=event.y+sdown;
-		x=event.x+sleft;
+		y=event.y+sdown + 10;
+		x=event.x+sleft + 10;
 	}
 }
 
